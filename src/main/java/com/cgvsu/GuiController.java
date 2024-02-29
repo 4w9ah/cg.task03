@@ -1,5 +1,6 @@
 package com.cgvsu;
 
+import com.cgvsu.objreader.IncorrectFileException;
 import com.cgvsu.render_engine.RenderEngine;
 import javafx.fxml.FXML;
 import javafx.animation.Animation;
@@ -34,6 +35,7 @@ public class GuiController {
     private Canvas canvas;
 
     private Model mesh = null;
+    private ArrayList<Integer> delTest = new ArrayList<>();
 
     private Camera camera = new Camera(
             new Vector3f(0, 00, 100),
@@ -41,7 +43,7 @@ public class GuiController {
             1.0F, 1, 0.01F, 100);
 
     private Timeline timeline;
-    private ArrayList<Integer> delTest = new ArrayList<>();
+
 
 
     @FXML
@@ -84,23 +86,27 @@ public class GuiController {
         try {
             String fileContent = Files.readString(fileName);
             mesh = ObjReader.read(fileContent);
-            //test
-            delTest.add(0);
-            //test
 
         } catch (IOException exception) {
 
+        } catch (IncorrectFileException e) {
+            throw new RuntimeException(e);
         }
     }
 
     @FXML
     public void handleCameraForward(ActionEvent actionEvent) {
         camera.movePosition(new Vector3f(0, 0, -TRANSLATION));
+        // todo: обработка ошибок
         //TEST
+        delTest.clear();
+        for (int i = 0; i<100; i++){
+            delTest.add(i);
+        }
         VertexDeletion.deleteVertexes(mesh, delTest);
         //TEST
         System.out.println("hi");
-        // todo: обработка ошибок
+
 
     }
 
