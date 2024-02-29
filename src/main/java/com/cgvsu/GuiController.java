@@ -87,6 +87,20 @@ public class GuiController {
             String fileContent = Files.readString(fileName);
             mesh = ObjReader.read(fileContent);
 
+//            for (int i = 0; i<100; i++){
+//                delTest.add(i);
+//            }
+//            delTest.add(0);
+//            VertexDeletion.deleteVertexes(mesh, delTest);
+//            //TEST
+//            System.out.println(mesh.vertices.size());
+//            System.out.println(mesh.polygons.size());
+//
+//            double width = canvas.getWidth();
+//            double height = canvas.getHeight();
+//
+//            RenderEngine.render(canvas.getGraphicsContext2D(), camera, mesh, (int) width, (int) height);
+
         } catch (IOException exception) {
 
         } catch (IncorrectFileException e) {
@@ -100,12 +114,21 @@ public class GuiController {
         // todo: обработка ошибок
         //TEST
         delTest.clear();
-        for (int i = 0; i<100; i++){
-            delTest.add(i);
-        }
+       delTest.add(0);
+//        for (int i = 0; i<100; i++){
+//            delTest.add(i);
+//        }
+//        VertexDeletion.deleteVertexes(mesh, delTest);
+//        //TEST
+        System.out.print("before ");
+        System.out.print(mesh.vertices.size() + " ");
+        System.out.println(mesh.polygons.size());
+
         VertexDeletion.deleteVertexes(mesh, delTest);
-        //TEST
-        System.out.println("hi");
+
+        System.out.print("after ");
+        System.out.print(mesh.vertices.size() + " ");
+        System.out.println(mesh.polygons.size());
 
 
     }

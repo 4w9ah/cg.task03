@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.cgvsu.objreader.ObjReaderTest" time="0.083" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.cgvsu.objreader.ObjReaderTest" time="0.111" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="C:\Users\ppv\.jdks\openjdk-21.0.2\bin"/>
-    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\ppv\AppData\Local\Temp\surefire2816558649648700357 2024-02-29T17-43-56_799-jvmRun1 surefire-20240229174357127_1tmp surefire_0-20240229174357127_2tmp"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\ppv\AppData\Local\Temp\surefire15611582109264729653 2024-02-29T21-33-51_321-jvmRun1 surefire-20240229213351852_1tmp surefire_0-20240229213351852_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\ppv\IdeaProjects\cg.task03\target\test-classes;C:\Users\ppv\.m2\repository\org\openjfx\javafx-controls\17.0.0.1\javafx-controls-17.0.0.1.jar;C:\Users\ppv\.m2\repository\org\openjfx\javafx-graphics\17.0.0.1\javafx-graphics-17.0.0.1.jar;C:\Users\ppv\.m2\repository\org\openjfx\javafx-base\17.0.0.1\javafx-base-17.0.0.1.jar;C:\Users\ppv\.m2\repository\org\openjfx\javafx-fxml\17.0.0.1\javafx-fxml-17.0.0.1.jar;C:\Users\ppv\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\ppv\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\ppv\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\ppv\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ppv\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.1\junit-jupiter-engine-5.8.1.jar;C:\Users\ppv\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -60,8 +60,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testParseVertex01" classname="com.cgvsu.objreader.ObjReaderTest" time="0.039"/>
-  <testcase name="testParseVertex02" classname="com.cgvsu.objreader.ObjReaderTest" time="0.002"/>
-  <testcase name="testParseVertex03" classname="com.cgvsu.objreader.ObjReaderTest" time="0.012"/>
-  <testcase name="testParseVertex04" classname="com.cgvsu.objreader.ObjReaderTest" time="0.002"/>
+  <testcase name="testParseVertex01" classname="com.cgvsu.objreader.ObjReaderTest" time="0.048"/>
+  <testcase name="testParseVertex02" classname="com.cgvsu.objreader.ObjReaderTest" time="0.008"/>
+  <testcase name="testParseVertex03" classname="com.cgvsu.objreader.ObjReaderTest" time="0.019"/>
+  <testcase name="testParseVertex04" classname="com.cgvsu.objreader.ObjReaderTest" time="0.004"/>
 </testsuite>

@@ -17,4 +17,6 @@ public class Model {
         this.normals = normals;
         this.polygons = polygons;
     }
+    public Model(){
+    }
 }

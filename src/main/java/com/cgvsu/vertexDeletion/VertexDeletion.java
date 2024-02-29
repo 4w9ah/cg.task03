@@ -8,30 +8,27 @@ import java.util.ArrayList;
 public class VertexDeletion {
 
     public static void deleteVertexes(Model model, ArrayList<Integer> deletedVertex) {
-        if (deletedVertex.isEmpty()) return;
-        if (model == null || model.vertices.isEmpty()) {
-            throw new NullPointerException("Model is empty!");
-        }
+//        if (deletedVertex.isEmpty()) return;
+//        if (model == null || model.vertices.isEmpty()) {
+//            throw new NullPointerException("Model is empty!");
+//        }
 
         //проходим по полигонам модели удаляя все,
         // которые содержат любую вершину из полученного "списка смерти"
-        ArrayList<Integer> polygonVertices = new ArrayList<>();
-
-//        int polygonArraySize;
+        ArrayList<Integer> polygonVertices;
 
         for (int i = model.polygons.size() - 1; i >= 0; i--) {
-            for (int j = 0; j<deletedVertex.size(); j++){
+            for (int j = 0; j < deletedVertex.size(); j++) {
                 for (int k : model.polygons.get(i).getVertexIndices()) {
                     if (k == deletedVertex.get(j)) {
                         model.polygons.remove(i);
-                        i--;
-                        j=deletedVertex.size()+100;
+//                        i--;
+                        j = deletedVertex.size() + 100;
                         break;
                     }
                 }
             }
         }
-
 
         //Теперь помечаем к удалению "висячие" вершины
         int vertArrSize = model.vertices.size();
@@ -55,9 +52,9 @@ public class VertexDeletion {
             if (del == 1) vertToRemove.add(i);
         }
         //Второй проход с правкой значений вертексов в полигонах
-        ArrayList<Integer> tmp = new ArrayList<>();
+
         int tmpVertIndex;
-        if (vertToRemove.isEmpty()) return;
+//        if (vertToRemove.isEmpty()) return;
 
         for (int i = vertToRemove.size() - 1; i >= 0; i--) {
             for (int j = 0; j < model.polygons.size(); j++) {
@@ -67,8 +64,6 @@ public class VertexDeletion {
                         tmpVertIndex = p.getVertexIndices().get(k);
                         tmpVertIndex--;
                         p.getVertexIndices().set(k, tmpVertIndex);
-                    } else {
-//                        tmp.add(p.getVertexIndices().get(k));
                     }
                 }
             }
