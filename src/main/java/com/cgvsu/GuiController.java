@@ -15,7 +15,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.io.IOException;
 import java.io.File;
+import java.util.ArrayList;
 import javax.vecmath.Vector3f;
+import com.cgvsu.vertexDeletion.VertexDeletion;
 
 import com.cgvsu.model.Model;
 import com.cgvsu.objreader.ObjReader;
@@ -39,6 +41,8 @@ public class GuiController {
             1.0F, 1, 0.01F, 100);
 
     private Timeline timeline;
+    private ArrayList<Integer> delTest = new ArrayList<>();
+
 
     @FXML
     private void initialize() {
@@ -80,7 +84,10 @@ public class GuiController {
         try {
             String fileContent = Files.readString(fileName);
             mesh = ObjReader.read(fileContent);
-            // todo: обработка ошибок
+            //test
+            delTest.add(0);
+            //test
+
         } catch (IOException exception) {
 
         }
@@ -89,6 +96,12 @@ public class GuiController {
     @FXML
     public void handleCameraForward(ActionEvent actionEvent) {
         camera.movePosition(new Vector3f(0, 0, -TRANSLATION));
+        //TEST
+        VertexDeletion.deleteVertexes(mesh, delTest);
+        //TEST
+        System.out.println("hi");
+        // todo: обработка ошибок
+
     }
 
     @FXML

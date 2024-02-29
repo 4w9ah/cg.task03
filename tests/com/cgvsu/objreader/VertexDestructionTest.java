@@ -13,13 +13,4 @@ import java.util.Arrays;
 
 import com.csvsu.vertexDestruction.VertexDestruction;
 
-public void VertexDestructionTest {
-    //@Test
-    public void testRemoveVertexFromPyramid(){
-        Model mdl = new Model();
-        mdl.vertices = new ArrayList<>();
-        mdl.polygons = new ArrayList<>();
-        mdl.vertices = new ArrayList<>();
-        mdl.vertices.add(new Vector3f(-1,-1,1));
-    }
-}
+public void
