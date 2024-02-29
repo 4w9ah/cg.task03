@@ -1,5 +1,4 @@
-package com.cgvsu.VertexDeletion;
-import com.cgvsu.math.*;
+package com.cgvsu.vertexDestruction;
 import com.cgvsu.model.*;
 
 import java.util.ArrayList;
